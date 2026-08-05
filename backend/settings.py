@@ -4,9 +4,12 @@ import os
 
 load_dotenv()
 
-class Settings:
+class Bot_Settings:
     BOT_TOKEN = os.environ.get("BOT_TOKEN"),
     BOT_NAME = os.environ.get(""),
     BOT_USERNAME = os.environ.get("")
 
-settings = Settings()   
+bot_settings = Bot_Settings()   
+
+class API_Settings:
+    pass
