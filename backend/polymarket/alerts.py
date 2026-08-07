@@ -71,7 +71,7 @@ def positions_to_dataframe(positions: list[dict]) -> pd.DataFrame:
 
 
 if __name__ == "__main__":
-    wallet = "0xc65ca4755436f82d8eb461e65781584b8cadea39"
+    wallet = "0x9db82de5a71ae539bc82f4d9ac3a007c7d742eff"
     positions = fetch_positions(wallet)
     print(f"{len(positions)} open position(s) for {wallet}\n")
 
