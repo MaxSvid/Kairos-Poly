@@ -9,7 +9,9 @@ back_button = InlineKeyboardMarkup(
 main = InlineKeyboardMarkup(
     inline_keyboard=[
         [InlineKeyboardButton(text="Polymarket", callback_data="reports_menu")],
-        [InlineKeyboardButton(text="Settings", callback_data="menu_settings")],
+        [InlineKeyboardButton(text="Wallets", callback_data="reports_menu")],
+        [InlineKeyboardButton(text="Positions", callback_data="reports_menu")],
+        [InlineKeyboardButton(text="Settings", callback_data="menu_settings")]
     ]
 )
 

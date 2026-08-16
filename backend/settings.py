@@ -10,14 +10,23 @@ class BotSettings:
     bot_name: str = field(default_factory=lambda: os.getenv("BOT_NAME", ""))
     bot_username: str = field(default_factory=lambda: os.getenv("BOT_USERNAME", ""))
 
+    # The only two people allowed to use the bot.
+    user_id: int = field(default_factory=lambda: int(os.getenv("USER_ID", "0")))
+    my_id: int = field(default_factory=lambda: int(os.getenv("MY_ID", "0")))
+ 
+    @property
+    def allowed_user_ids(self) -> set[int]:
+        return {self.user_id, self.my_id}
+
 @dataclass
 class DatabaseSettings:
-    db_host: str = field(default_factory=lambda: os.getenv("DB_HOST", "localhost"))
-    db_port: str = field(default_factory=lambda: os.getenv("DB_PORT", "5432"))
-    db_name: str = field(default_factory=lambda: os.getenv("DB_NAME", "kairos_test_db"))
-    db_user: str = field(default_factory=lambda: os.getenv("DB_USER", "project_service"))
-    db_password: str = field(default_factory=lambda: os.getenv("DB_PASSWORD", "change_me_bot_password"))
+    db_host: str = field(default_factory=lambda: os.getenv("DB_HOST"))
+    db_port: str = field(default_factory=lambda: os.getenv("DB_PORT"))
+    db_name: str = field(default_factory=lambda: os.getenv("DB_NAME"))
+    db_user: str = field(default_factory=lambda: os.getenv("DB_USER"))
+    db_password: str = field(default_factory=lambda: os.getenv("DB_PASSWORD"))
 
 # Instantiate clean global configuration objects
 bot_settings = BotSettings()
-db_settings = DatabaseSettings()
+db_settings = DatabaseSettings() 
+ 
