@@ -24,6 +24,7 @@ WALLETS = [
     ("logos_1",      "0xc65ca4755436f82d8eb461e65781584b8cadea39", "Esports - Valorant"),
     ("logos_2",      "0x5e6e2c3f06686f2607b86c90e35f536e81a1be00", "Esports - CS2:GO"),
     ("logos_3",      "0x8726d2642c9cdd9819a30539ff1acf7666090f36", "Esports - Valorant and CS2:GO"),
+    ("logos_5",      "0x8e74984fb998be82444627906740dc1a19c35972", "Esports - CS2:GO"),
     ("dialectic_1",  "0x91667e40b80c447050904b042f3b85d22fc6b479", "Esports - League of Legends")
 ]
 
