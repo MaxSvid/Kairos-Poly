@@ -86,7 +86,7 @@ def summarize(df: pd.DataFrame) -> None:
 
 
 if __name__ == "__main__":
-    wallet = "0x91667e40b80c447050904b042f3b85d22fc6b479"
+    wallet = "0x19ae9efef67c685a8581d631d99267b1ff10395c"
     positions = fetch_positions(wallet)
     print(f"{len(positions)} active position(s) for {wallet}\n")
 
@@ -98,3 +98,7 @@ if __name__ == "__main__":
 # 0x91667e40b80c447050904b042f3b85d22fc6b479
 
 # 0x8e74984fb998be82444627906740dc1a19c35972
+
+# 0x4d514c19b3dd6284c11a92dd6b1d151fb4c54946
+
+# 0x19ae9efef67c685a8581d631d99267b1ff10395c
