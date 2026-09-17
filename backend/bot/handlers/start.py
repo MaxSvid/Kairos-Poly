@@ -2,6 +2,8 @@ from aiogram import Router
 from aiogram.filters import Command
 from aiogram.types import Message
 
+from backend.bot.keyboards.main_menu import main_reply_keyboard
+
 router = Router()
 
 WELCOME_TEXT = (
@@ -20,7 +22,7 @@ WELCOME_TEXT = (
 @router.message(Command("start"))
 async def start_handler(message: Message):
     await message.answer(WELCOME_TEXT)
-    await message.answer("Main menu:")
+    await message.answer("Main menu:", reply_markup=main_reply_keyboard)
 
 
 @router.message(Command("help"))
